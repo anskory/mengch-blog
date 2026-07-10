@@ -1,0 +1,95 @@
+{
+  "site": {
+    "name": "檬橙博客",
+    "slogan": "在柠檬与橙光之间，记录下一些柔软的事",
+    "description": "檬橙博客是一个分享前端技术、生活随想与读书笔记的个人空间。",
+    "owner": "檬橙",
+    "email": "hi@mengch.blog",
+    "social": [
+      { "label": "GitHub", "url": "https://github.com/" },
+      { "label": "Twitter", "url": "https://twitter.com/" },
+      { "label": "Email",   "url": "mailto:hi@mengch.blog" }
+    ],
+    "nav": [
+      { "label": "首页",  "to": "/" },
+      { "label": "文章",  "to": "/articles" },
+      { "label": "关于",  "to": "/about" }
+    ]
+  },
+  "categories": [
+    { "key": "frontend", "name": "前端",     "description": "Web、动效、组件设计",   "accent": "lemon"  },
+    { "key": "backend",  "name": "后端",     "description": "服务端、数据库、架构",   "accent": "mint"   },
+    { "key": "life",     "name": "生活",     "description": "日常、随笔、思考",       "accent": "blush"  },
+    { "key": "notes",    "name": "笔记",     "description": "读书、学习、备忘",       "accent": "orange" }
+  ],
+  "articles": [
+    {
+      "id": "hello-mengch",
+      "title": "你好，檬橙 — 一封写给博客的开篇信",
+      "excerpt": "在第一篇文章里，聊聊为什么我要开始写博客，檬橙这个名字的由来，以及我会写些什么。",
+      "category": "life",
+      "tags": ["随笔", "开篇"],
+      "cover": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=a+cozy+desk+with+lemon+and+orange+fruits+warm+sunlight+journal+notebook+minimal+style&image_size=landscape_16_9",
+      "date": "2026-06-01",
+      "readingMinutes": 4,
+      "featured": true,
+      "content": "## 开篇\n\n这是一个关于\"开始\"的故事。\n\n在无数次想写博客、搭建了无数次博客、又无数次放弃之后，我决定在 2026 年的夏天，重新认真地开始一次。\n\n## 为什么叫\"檬橙\"\n\n**檬**是柠檬，**橙**是橙子。\n\n我喜欢柠檬那种冷冽又清香的味道，也喜欢橙子被阳光晒透后温暖的甜。它们看起来是同一种水果，但性格却截然不同——就像一个人在不同阶段的自己。\n\n我把这个博客叫做\"檬橙\"，是希望它能像这两种水果一样：\n\n- 既能保持冷静的思考，也能盛放温柔的情绪；\n- 既有鲜明的棱角，也有柔和的弧度。\n\n## 我会写些什么\n\n主要会写三类内容：\n\n1. **技术笔记** — 前端工程、设计系统、动画与可访问性；\n2. **生活随笔** — 关于阅读、电影、独处、走路时看见的光；\n3. **学习备忘** — 一些零碎但实用的知识清单。\n\n> \"持续地、诚实地、慢慢地写下去。\" —— 这是我对这个博客的期望。\n\n欢迎你来到檬橙，希望这里能成为你愿意停留一会儿的角落。\n\n—— 檬橙"
+    },
+    {
+      "id": "design-system-color",
+      "title": "从一只柠檬到一套色板：谈谈我的设计系统方法论",
+      "excerpt": "色彩不是孤立的存在，它会和字体、空间、动效共同决定一个产品的气质。这篇文章聊聊我是如何从一个\"柠橙\"的概念出发，搭建起一套完整的设计语言。",
+      "category": "frontend",
+      "tags": ["设计系统", "色彩", "Figma"],
+      "cover": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=color+palette+swatches+warm+yellow+orange+pastel+design+system+flat+lay&image_size=landscape_16_9",
+      "date": "2026-05-22",
+      "readingMinutes": 8,
+      "featured": true,
+      "content": "## 从一个\"印象\"开始\n\n在设计一个产品时，我习惯从一个具体的**印象**开始——它可能是一束光、一杯茶、一段旋律。\n\n对于檬橙博客，我的起点是：**初夏午后，阳光穿过窗帘洒在木桌上，旁边放着一只柠檬和一只橙子。**\n\n## 提取颜色\n\n从这个画面里，我提取出四个层次的色彩：\n\n- **主色**：柠橙渐变（#F7C04A → #F08A4B），作为强调与品牌色；\n- **辅色**：薄荷绿（#A8C8B5）、柔粉（#F4B6B6），提供情绪对比；\n- **中性色**：暖米白（#FBF8F3）、深墨（#1F1B16），构成内容载体。\n\n## 字体选择\n\n字体就像声音，它决定了内容被\"念出来\"时的语气。\n\n我选择 **Fraunces**（一款带有现代衬线感的展示字）与 **Noto Serif SC**（中文衬线）作为标题字体，**Inter** 与 **Noto Sans SC** 作为正文。\n\n## 节奏与空间\n\n最后，让一切呼吸起来的是**空间**——大留白、卡片化的分隔、缓慢的入场动画，以及偶尔跳出网格的装饰元素。\n\n代码只是一种工具，**设计是让工具在合适的时机出现**。"
+    },
+    {
+      "id": "spring-rain",
+      "title": "春雨、夜灯、一碗面",
+      "excerpt": "一些生活里的小事，不足以写进简历，但足以让人感到被生活温柔地接住。",
+      "category": "life",
+      "tags": ["随笔", "日常"],
+      "cover": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=rainy+night+window+with+warm+desk+lamp+bowl+of+noodles+cozy+interior+cinematic&image_size=landscape_16_9",
+      "date": "2026-04-18",
+      "readingMinutes": 3,
+      "content": "## 春雨\n\n三月末的雨，总是在夜里悄悄落下。\n\n我坐在书桌前，听着窗外的声音——雨点打在窗沿、滴落到树叶、再顺着屋檐汇成一条细流。屋里很安静，桌上一盏小灯亮着，把手边那本翻到一半的书照得泛黄。\n\n## 夜灯\n\n这盏灯是我在二手市场淘来的，金属底座已经有些斑驳，但灯罩是温润的奶白色，打开后总能把整张桌面染成一片蜂蜜色。\n\n它陪伴我已经第三个春天了。\n\n## 一碗面\n\n写到一半，有点饿。\n\n我起身去厨房，给自己煮了一碗面：清水、加一点酱油、一撮葱花、半颗切开的番茄。面在锅里翻滚的时候，雨还在下。\n\n吃完那碗面，回到桌前，我觉得整个人都被刷新了。\n\n---\n\n> 很多时候，我们以为生活缺少的是宏大的事件，但其实，让我们感到富足的，恰恰是这些微不足道的小事。"
+    },
+    {
+      "id": "restful-api-notes",
+      "title": "RESTful 设计的 12 个细节",
+      "excerpt": "RESTful 不只是\"用名词+HTTP 方法\"那么简单。这篇文章整理了 12 个我在实际项目中反复使用的设计细节。",
+      "category": "backend",
+      "tags": ["RESTful", "API", "笔记"],
+      "cover": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minimal+api+documentation+blueprint+style+technical+illustration&image_size=landscape_16_9",
+      "date": "2026-04-02",
+      "readingMinutes": 7,
+      "content": "## 1. 资源用复数名词\n\n`/users` 而不是 `/user`，保持集合语义一致。\n\n## 2. 动作用 HTTP 动词\n\n- `GET` 读\n- `POST` 创建\n- `PUT`/`PATCH` 更新\n- `DELETE` 删除\n\n## 3. 状态码要精准\n\n- `200` 成功\n- `201` 已创建\n- `204` 无内容\n- `400` 客户端错误\n- `401` 未认证\n- `403` 无权限\n- `404` 不存在\n- `409` 冲突\n- `500` 服务端错误\n\n## 4. 用嵌套表达从属\n\n`/users/123/orders` 比 `/user-orders?user_id=123` 更易读。\n\n## 5. 过滤、排序、分页用查询参数\n\n```\nGET /articles?category=frontend&sort=-date&page=2&pageSize=10\n```\n\n## 6. 统一返回结构\n\n```json\n{\n  \"code\": 0,\n  \"data\": { },\n  \"message\": \"ok\"\n}\n```\n\n## 7. 时间用 ISO 8601\n\n`2026-04-02T12:30:00Z` 远比 `1712056200` 易读。\n\n## 8. 错误信息要可读\n\n`\"email already taken\"` 远比 `\"E_DUPLICATE\"` 友好。\n\n## 9. 用 HATEOAS 提供下一步\n\n在响应里告诉客户端\"接下来可以做什么\"。\n\n## 10. 限流要前置\n\n把限流放在网关或反向代理，不要在业务代码里硬扛。\n\n## 11. 文档与代码同源\n\nOpenAPI + 代码生成 + 自动化测试，让文档永远不会过时。\n\n## 12. 版本化你的 API\n\n`/api/v1/...` 比 `Accept: application/vnd.myapi.v2+json` 更直观。\n\n---\n\nRESTful 不是教条，而是一种**为了让接口更好用**的设计倾向。"
+    },
+    {
+      "id": "reading-list-2026",
+      "title": "2026 年上半年，我的私人阅读清单",
+      "excerpt": "10 本书，10 个不眠夜。整理一份我今年读过、并且强烈推荐的书单，附上简短的读后感。",
+      "category": "notes",
+      "tags": ["书单", "阅读"],
+      "cover": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=stack+of+books+warm+light+cozy+reading+nook+window+minimal+style&image_size=landscape_16_9",
+      "date": "2026-03-15",
+      "readingMinutes": 6,
+      "content": "## 一、关于写作\n\n1. **《写作风格的意识》** — 史蒂芬·平克\n   好的写作，是把复杂的事情说清楚。\n\n2. **《故事》** — 罗伯特·麦基\n   所有的故事，本质上都在讲\"一个人如何改变\"。\n\n## 二、关于设计\n\n3. **《设计的觉醒》** — 原研哉\n   设计不是装饰，是让生活变得更合人心意的努力。\n\n4. **《设计中的设计》** — 同上作者的另一本\n   每次重读都有新收获。\n\n## 三、关于生活\n\n5. **《也许你该找个人聊聊》** — 洛莉·戈特利布\n   一个心理治疗师的回忆录，写得真诚又有温度。\n\n6. **《被讨厌的勇气》** — 岸见一郎\n   阿德勒心理学入门，颠覆但实用。\n\n## 四、关于技术\n\n7. **《代码整洁之道》** — Robert C. Martin\n   即使写了很多年代码，每次翻都有新理解。\n\n8. **《系统设计面试》** — Alex Xu\n   一本可以直接用的工程师工具书。\n\n## 五、关于诗歌\n\n9. **《二十首情诗和一首绝望的歌》** — 聂鲁达\n   \"我喜欢你是寂静的，仿佛你消失了一样。\"\n\n10. **《我喜欢这个世界荒诞又热闹》** — 蔡仁伟\n    短小、温柔、有趣的小诗合集。\n\n---\n\n读书是一件不需要被鼓励的事——你只要**安静地开始读**。"
+    },
+    {
+      "id": "vite-react-starter",
+      "title": "一个舒服的 React + Vite 项目模板是怎么炼成的",
+      "excerpt": "Tailwind、Router、Zustand、TypeScript——一个能让我每次开新项目都直接套用的最小配置。",
+      "category": "frontend",
+      "tags": ["React", "Vite", "工程化"],
+      "cover": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=developer+workspace+code+editor+on+screen+warm+desk+lamps+minimal&image_size=landscape_16_9",
+      "date": "2026-02-10",
+      "readingMinutes": 9,
+      "content": "## 选型原则\n\n好的项目模板，应当满足三个条件：\n\n1. **启动足够快** — `npm create && npm run dev` 之后能立即看到页面；\n2. **依赖足够少** — 不堆砌\"以备不时之需\"的库；\n3. **可读性高** — 文件结构清晰，命名统一，新人能在 5 分钟内理解。\n\n## 我的最小栈\n\n```json\n{\n  \"dependencies\": {\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"react-router-dom\": \"^7.0.0\"\n  },\n  \"devDependencies\": {\n    \"vite\": \"^6.0.0\",\n    \"@vitejs/plugin-react\": \"^4.0.0\",\n    \"tailwindcss\": \"^3.4.0\",\n    \"typescript\": \"~5.8.0\"\n  }\n}\n```\n\n## 目录结构\n\n```\nsrc/\n├── components/   // 可复用 UI\n├── pages/        // 路由级页面\n├── hooks/        // 自定义 Hooks\n├── lib/          // 工具函数\n├── data/         // 静态数据 / Mock\n├── App.tsx\n└── main.tsx\n```\n\n## 一些小心得\n\n- **样式用 Tailwind，自定义 token 写在 `tailwind.config.js`**：让品牌色统一管理；\n- **路由不要用 lazy**：开发体验差别不大，但会增加心智负担；\n- **TypeScript 越简单越好**：禁止使用太复杂的类型体操，让团队所有人都能看懂。\n\n---\n\n> 工具的优雅，不在于它有多强大，而在于它能不能让你忘记它的存在。"
+    }
+  ]
+}
