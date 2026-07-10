@@ -1,56 +1,89 @@
+# ============================================================
+# 檬橙博客 - GitHub Pages 自动部署工作流
+# ============================================================
+# 功能说明：
+#   当代码推送到 main 分支时，自动构建项目并部署到 GitHub Pages
+#   也支持手动触发部署（workflow_dispatch）
+#
+# 部署流程：
+#   1. build  job：检出代码 → 安装依赖 → 构建项目 → 上传产物
+#   2. deploy job：等待 build 完成 → 部署到 GitHub Pages
+# ============================================================
+
 name: Deploy to GitHub Pages
 
+# 触发条件
 on:
+  # 推送到 main 分支时触发
   push:
     branches:
       - main
+  # 支持手动触发（在 GitHub Actions 页面手动运行）
   workflow_dispatch:
 
+# 工作流权限配置
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read      # 读取仓库内容权限
+  pages: write        # 写入 GitHub Pages 权限
+  id-token: write     # ID Token 权限（用于 Pages 部署认证）
 
+# 并发控制：确保同一时间只有一个部署在进行
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: "pages"           # 并发组名称
+  cancel-in-progress: true # 取消正在进行的部署，只保留最新的
 
 jobs:
+  # ============================================================
+  # 构建 Job：编译项目并上传构建产物
+  # ============================================================
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # 运行环境：最新版 Ubuntu
     steps:
+      # 步骤1：检出仓库代码
       - name: Checkout
         uses: actions/checkout@v4
 
+      # 步骤2：设置 Node.js 环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
-          cache: "npm"
+          node-version: "22"   # Node.js 版本 22（LTS）
+          cache: "npm"         # 缓存 npm 依赖，加速后续构建
 
+      # 步骤3：安装项目依赖
+      # 使用 npm ci 确保依赖版本与 package-lock.json 完全一致
       - name: Install dependencies
         run: npm ci
 
+      # 步骤4：构建生产版本
       - name: Build
         run: npm run build
 
+      # 步骤5：配置 GitHub Pages
+      # enablement: true 确保 Pages 功能已启用
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
 
+      # 步骤6：上传构建产物作为 artifact
+      # 将 dist 目录上传，供 deploy job 使用
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
+  # ============================================================
+  # 部署 Job：将构建产物部署到 GitHub Pages
+  # ============================================================
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
+    needs: build              # 依赖 build job，必须等 build 完成后才执行
+    runs-on: ubuntu-latest    # 运行环境：最新版 Ubuntu
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      name: github-pages                    # 环境名称
+      url: ${{ steps.deployment.outputs.page_url }}  # 部署后的访问 URL
     steps:
+      # 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

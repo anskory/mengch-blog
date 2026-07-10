@@ -1,17 +1,52 @@
 <!doctype html>
+<!--
+  檬橙博客 - HTML 入口文件
+  功能：
+  - 定义页面基础结构和元数据
+  - 设置网站图标、标题、描述等 SEO 信息
+  - 提供 React 应用的挂载点（#root）
+  - 加载 Vite 开发环境的错误提示脚本
+-->
 <html lang="zh-CN">
   <head>
+    <!-- 字符编码：使用 UTF-8 支持中文等多语言字符 -->
     <meta charset="UTF-8" />
+
+    <!-- 网站图标：使用 PNG 格式的檬橙图标 -->
     <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- 视口设置：响应式设计基础，确保移动端正确缩放 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO 元数据：网站描述，用于搜索引擎结果展示 -->
     <meta name="description" content="檬橙博客 — 记录技术、生活与灵感的角落，清新而富有质感的个人创作空间。" />
+
+    <!-- SEO 元数据：关键词，帮助搜索引擎索引 -->
     <meta name="keywords" content="檬橙博客,个人博客,前端,后端,生活随笔,技术笔记" />
+
+    <!-- 作者信息 -->
     <meta name="author" content="檬橙" />
+
+    <!-- 浏览器主题色：移动端浏览器地址栏颜色，与品牌色一致 -->
     <meta name="theme-color" content="#FBF8F3" />
+
+    <!-- Open Graph 元数据：社交分享时的标题 -->
     <meta property="og:title" content="檬橙博客 | Mengch Blog" />
+
+    <!-- Open Graph 元数据：社交分享时的描述 -->
     <meta property="og:description" content="记录技术、生活与灵感的角落。" />
+
+    <!-- Open Graph 元数据：内容类型为网站 -->
     <meta property="og:type" content="website" />
+
+    <!-- 页面标题：浏览器标签栏显示 -->
     <title>檬橙博客 — 在柠檬与橙光之间，记录下一些柔软的事</title>
+
+    <!--
+      Vite 开发环境错误监听脚本
+      作用：在开发模式下，将 Vite 构建错误输出到浏览器控制台
+      仅在开发环境生效，生产构建时 import.meta.hot 不存在
+    -->
     <script type="module">
       if (import.meta.hot?.on) {
         import.meta.hot.on('vite:error', (error) => {
@@ -25,7 +60,10 @@
     </script>
   </head>
   <body>
+    <!-- React 应用挂载根节点 -->
     <div id="root"></div>
+
+    <!-- Vite 模块入口：加载 React 应用主入口文件 -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
