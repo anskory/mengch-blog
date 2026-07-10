@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script>
+      (function () {
+        var l = window.location;
+        var basePath = '/mengch-blog/';
+        var path = l.pathname.replace(new RegExp('^' + basePath), '');
+        if (path && path !== '/') {
+          l.replace(basePath + '#/' + path + l.search + l.hash);
+        } else {
+          l.replace(basePath + '#/');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>
