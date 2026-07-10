@@ -27,9 +27,9 @@ export default function Navbar() {
       <div className="container max-w-6xl flex items-center justify-between h-16">
         <NavLink to="/" className="group flex items-center gap-2.5">
           <img
-            src="/favicon.svg"
+            src="/favicon.png"
             alt="檬橙博客"
-            className="w-9 h-9 rounded-lg shadow-soft"
+            className="w-9 h-9 rounded-lg shadow-soft object-cover"
           />
           <div className="leading-tight">
             <div className="font-display text-lg text-ink-900 font-semibold tracking-tight">

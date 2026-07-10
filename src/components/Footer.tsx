@@ -18,9 +18,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2.5">
               <img
-                src="/favicon.svg"
+                src="/favicon.png"
                 alt={site.name}
-                className="w-9 h-9 rounded-lg shadow-soft"
+                className="w-9 h-9 rounded-lg shadow-soft object-cover"
               />
               <span className="font-display text-lg text-ink-900 font-semibold">
                 {site.name}
