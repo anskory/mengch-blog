@@ -1,10 +1,9 @@
-import { Github, Twitter, Mail, Heart, type LucideIcon } from 'lucide-react';
+import { Github, Mail, Heart, type LucideIcon } from 'lucide-react';
 import { site } from '@/lib/data';
 import BeianBadge from './BeianBadge';
 
 const socialIcons: Record<string, LucideIcon> = {
   GitHub: Github,
-  Twitter: Twitter,
   Email: Mail,
 };
 

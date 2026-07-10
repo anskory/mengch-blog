@@ -1,4 +1,4 @@
-import { Github, Twitter, Mail, Coffee, BookOpen, Code2, Sparkles, type LucideIcon } from 'lucide-react';
+import { Github, Mail, Coffee, BookOpen, Code2, Sparkles, type LucideIcon } from 'lucide-react';
 import { site } from '@/lib/data';
 
 const skills = [
@@ -14,7 +14,6 @@ const skills = [
 
 const socialIcons: Record<string, LucideIcon> = {
   GitHub: Github,
-  Twitter: Twitter,
   Email: Mail,
 };
 

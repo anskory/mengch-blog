@@ -4,11 +4,10 @@
     "slogan": "在柠檬与橙光之间，记录下一些柔软的事",
     "description": "檬橙博客是一个分享前端技术、生活随想与读书笔记的个人空间。",
     "owner": "檬橙",
-    "email": "hi@mengch.blog",
+    "email": "anskory@qq.vip.com",
     "social": [
-      { "label": "GitHub", "url": "https://github.com/" },
-      { "label": "Twitter", "url": "https://twitter.com/" },
-      { "label": "Email",   "url": "mailto:hi@mengch.blog" }
+      { "label": "GitHub", "url": "https://github.com/anskory" },
+      { "label": "Email",   "url": "mailto:anskory@qq.vip.com" }
     ],
     "nav": [
       { "label": "首页",  "to": "/" },
