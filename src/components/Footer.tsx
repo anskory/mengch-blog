@@ -17,9 +17,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-sun-gradient shadow-soft">
-                <span className="text-cream-50 font-display font-bold text-lg">M</span>
-              </span>
+              <img
+                src="/favicon.svg"
+                alt={site.name}
+                className="w-9 h-9 rounded-lg shadow-soft"
+              />
               <span className="font-display text-lg text-ink-900 font-semibold">
                 {site.name}
               </span>

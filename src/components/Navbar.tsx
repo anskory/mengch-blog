@@ -26,10 +26,11 @@ export default function Navbar() {
     >
       <div className="container max-w-6xl flex items-center justify-between h-16">
         <NavLink to="/" className="group flex items-center gap-2.5">
-          <span className="relative inline-flex items-center justify-center w-9 h-9 rounded-full bg-sun-gradient shadow-soft">
-            <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-mint-400 border-2 border-cream-100" />
-            <span className="text-cream-50 font-display font-bold text-lg">M</span>
-          </span>
+          <img
+            src="/favicon.svg"
+            alt="檬橙博客"
+            className="w-9 h-9 rounded-lg shadow-soft"
+          />
           <div className="leading-tight">
             <div className="font-display text-lg text-ink-900 font-semibold tracking-tight">
               檬橙博客
